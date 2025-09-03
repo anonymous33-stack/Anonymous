@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-darkcyan-100 flex justify-center items-center min-h-screen">
+  <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-2xl text-center">
+    
+    <h1 class="text-3xl font-bold text-black-600 mb-6">Quiz Application</h1>
+
+    <div class="flex justify-between items-center mb-6">
+      <span class="text-lg font-medium">Question 
+        <span id="currentQuestionNo"></span> / 
+        <span id="totalQuestionNumber"></span>
+      </span>
+      <span class="text-lg font-semibold text-blue-500">
+        <span id="timerDisplay"></span>s
+      </span>
+      <span class="text-lg font-semibold text-blue-600">
+        Marks: <span id="marksDisplay">0</span>
+      </span>
+    </div>
+   
+
+    <h2 id="displayQuestion" class="text-xl font-semibold mb-6"></h2>
+
+    <div id="displayOptions" class="grid grid-cols-2 gap-4"></div>
+
+    <div class="flex justify-between mt-8">
+      <button onclick="previousQuestion()" 
+        class="bg-black-300 hover:bg-black-400 text-black-800 font-semibold py-2 px-6 rounded-lg shadow-md transition duration-200">
+        Previous
+      </button>
+      <button onclick="nextQuestion()" 
+        class="bg-white-500 hover:bg-white-600 text-blackfont-semibold py-2 px-6 rounded-lg shadow-md transition duration-200">
+        Next
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
